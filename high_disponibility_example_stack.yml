@@ -26,11 +26,11 @@ Parameters:
 Mappings:
   AWSRegionToAMI:
     us-east-1:
-      AMIID: ami-eca289fb
+      AMIID: ami-07d0cf3af28718ef8
     us-east-2:
-      AMIID: ami-446f3521
+      AMIID: ami-05c1fa8df71875112
     us-west-1:
-      AMIID: ami-9fadf8ff
+      AMIID: ami-08fd8ae3806f09a08
     us-west-2:
       AMIID: ami-005bdb005fb00e791
 
