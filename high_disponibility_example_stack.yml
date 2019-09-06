@@ -322,6 +322,20 @@ Resources:
         - Type: forward
           TargetGroupArn: !Ref UdagramTargetGroup
 
+  LoadBalancerListenerRule:
+    Type: 'AWS::ElasticLoadBalancingV2::ListenerRule'
+    DependsOn: LoadBalancerListener
+    Properties:
+      Actions:
+        - Type: forward
+          TargetGroupArn: !Ref UdagramTargetGroup
+      Conditions:
+        - Field: path-pattern
+          Values:
+            - /
+      ListenerArn: !Ref LoadBalancerListener
+      Priority: 1
+
   UdagramSSHInstance:
     Type: AWS::EC2::Instance
     Properties:
